@@ -1,0 +1,286 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+.marquee_background{
+    background-color: #2161bb;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    padding-inline: 6.1rem;
+}
+
+.marquee{
+    direction: left;
+    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.carousel_container{
+    padding-inline: 9.5rem;
+    width: 100%;
+}
+
+img{
+    height: 30rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.span{
+    background-color: #21539a;
+    border-right: 5px solid white;
+    padding: 0 1rem;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+
+.marquee ul, .navbar{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+.marquee ul li, .navbar li{
+    list-style: none;
+    margin-right: 4rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.icon{
+    border-radius: 50%;
+    color: #7aacf1;
+    height: 40px;
+    width: 40px;
+    font-weight: bold;
+    background: #7aacf1;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+.icon::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+    text-align: center;
+}
+
+.main{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.navbar{
+    width: max-content;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.image{
+    width: 100%;
+    padding-inline: 9.5rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.diploma{
+    position: relative;
+}
+
+.diploma>h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.other_courses{
+    position: absolute;
+    bottom: -100%;
+    right: 15%;
+    background-color: #F2F5FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.other_courses span{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.other_courses ul{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: .5rem;
+}
+.other_courses ul li{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+    color: #0464A0;
+}
+
+.text{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.text span:first-child{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color: #0464A0;
+    margin: 2rem 0;
+}
+
+.text span:last-child{
+    width: 60%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.cards{
+    width: 70%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 7rem;
+}
+
+.card{
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgba(57, 57, 57, 0.2);
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1200px) {
+    .carousel_container, .image, .marquee_background{
+        padding-inline: 4rem;
+}
+@media screen and (max-width:1000px) {
+    .carousel_container, .image{
+        padding-inline: 0;
+    }
+    .other_courses{
+        right: 5%;
+    }
+    .text{
+        padding-inline: 0 2rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .marquee_background{
+        padding-inline: 2rem;
+    }
+    .span{
+        padding:0  0.5rem;
+        font-size: .9rem;
+        width: 6rem;
+    }
+    img{
+        height: 20rem;
+    }
+
+    .cards{
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    .other_courses{
+        right: 22.5%;
+        padding: 1rem 3rem;
+    }
+    .text{
+        margin-top: 15rem;
+        padding-inline: 0;
+        width: 90%;
+    }
+
+    .text span:last-child{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    img{
+        height: 15rem;
+    }
+    .marquee_background{
+        padding-inline: 0;
+    }
+    .icon{
+        height: 30px;
+        width: 30px;
+    }
+    .icon::before{
+        height: 15px;
+        width: 15px;
+    }
+    .other_courses{
+        right: 10%;
+    }
+}
+
+@media screen and (max-width:400px) {
+     ul{
+        font-size:.8rem;
+    }
+    .other_courses{
+        padding: 1rem;
+    }
+}
