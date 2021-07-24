@@ -2,34 +2,40 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Mukta', sans-serif;
-}
 
+}
 
 .marquee_background{
     background-color: #2161bb;
     width: 100%;
+    height: 3rem;
     color: white;
+    font-family: 'Mukta', sans-serif;
+}
+
+.marquee_content{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
-    padding-inline: 6.1rem;
 }
 
 .marquee{
     direction: left;
-    width: 80%;
     height: 100%;
     font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
+    padding-top: .6rem;
+}
+
+.main_container{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Arvo', serif;
 }
 
 .carousel_container{
-    padding-inline: 9.5rem;
     width: 100%;
 }
 
@@ -44,12 +50,11 @@ h1{
 .span{
     background-color: #21539a;
     border-right: 5px solid white;
-    padding: 0 1rem;
-    width: max-content;
+    width: 8rem;
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 100%;
     font-weight: bold;
     letter-spacing: .05rem;
 }
@@ -95,42 +100,41 @@ h1{
     text-align: center;
 }
 
-.main{
-    width: 100%;
-    margin-top: 5rem;
-}
-
-.navbar{
-    width: max-content;
-    margin: 2rem auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .image{
     width: 100%;
-    padding-inline: 9.5rem;
     height: 15rem;
     object-fit: cover;
+    opacity: .3;
+}
+
+.background{
+    background-color: black;
 }
 
 .diploma{
     position: relative;
+    margin-top: 5rem;
 }
 
-.diploma>h1{
+.diploma>span{
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: .05rem;
 }
 
 .other_courses{
     position: absolute;
     bottom: -100%;
-    right: 15%;
+    right: 5%;
     background-color: #F2F5FF;
     display: flex;
     justify-content: center;
@@ -159,11 +163,9 @@ h1{
 }
 
 .text{
-    width: 75%;
-    margin: 0 auto;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
 }
 
 .text span:first-child{
@@ -176,7 +178,7 @@ h1{
 }
 
 .text span:last-child{
-    width: 60%;
+    width: 80%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -187,7 +189,7 @@ h1{
 }
 
 .cards{
-    width: 70%;
+    width: 90%;
     margin: 5rem auto;
     display: flex;
     justify-content: space-between;
@@ -207,35 +209,28 @@ h1{
     align-items: center;
 }
 
-@media screen and (max-width:1200px) {
-    .carousel_container, .image, .marquee_background{
-        padding-inline: 4rem;
-}
 @media screen and (max-width:1000px) {
-    .carousel_container, .image{
-        padding-inline: 0;
+    .main_container, .marquee_content{
+        width: 100%;
     }
     .other_courses{
         right: 5%;
     }
     .text{
-        padding-inline: 0 2rem;
+        padding-left: 2rem;
+    }
+    .text span:last-child{
+        width: 80%;
     }
 }
 
 @media screen and (max-width:800px) {
-    .marquee_background{
-        padding-inline: 2rem;
-    }
     .span{
-        padding:0  0.5rem;
         font-size: .9rem;
-        width: 6rem;
     }
     img{
         height: 20rem;
     }
-
     .cards{
         flex-direction: column;
         row-gap: 2rem;
@@ -246,8 +241,8 @@ h1{
     }
     .text{
         margin-top: 15rem;
-        padding-inline: 0;
-        width: 90%;
+        width: 100%;
+        padding-inline: 1rem;
     }
 
     .text span:last-child{
@@ -272,7 +267,7 @@ h1{
         width: 15px;
     }
     .other_courses{
-        right: 10%;
+        right: 5%;
     }
 }
 
