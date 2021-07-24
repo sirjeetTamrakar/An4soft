@@ -146,6 +146,8 @@ h1{
 
 .other_courses span{
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    padding-inline: 4rem;
+    padding-bottom: .4rem;
 }
 
 .other_courses ul{
@@ -209,18 +211,30 @@ h1{
     align-items: center;
 }
 
+@media screen and (min-width: 1400px) {
+    .text{
+        width: 90%;
+    }
+}
 @media screen and (max-width:1000px) {
     .main_container, .marquee_content{
         width: 100%;
     }
-    .other_courses{
-        right: 5%;
+
+    .diploma{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    
     .text{
         padding-left: 2rem;
     }
+    .text span:first-child{
+        margin: 1rem 0;
+    }
     .text span:last-child{
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -236,15 +250,21 @@ h1{
         row-gap: 2rem;
     }
     .other_courses{
-        right: 22.5%;
-        padding: 1rem 3rem;
+        margin: 0 5rem;
+        right: 0%;
+        left: 0%;
     }
     .text{
         margin-top: 15rem;
         width: 100%;
         padding-inline: 1rem;
     }
-
+    .text span:first-child{
+        margin: 2rem 0;
+    }
+    .diploma span{
+        font-size: 30px;
+    }
     .text span:last-child{
         width: 100%;
     }
@@ -267,7 +287,11 @@ h1{
         width: 15px;
     }
     .other_courses{
-        right: 5%;
+        margin: 0 3rem;
+    }
+
+    .diploma span{
+        font-size: 20px;
     }
 }
 
@@ -275,7 +299,16 @@ h1{
      ul{
         font-size:.8rem;
     }
+    .diploma span{
+        font-size: 15px;
+    }
     .other_courses{
-        padding: 1rem;
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .other_courses{
+        margin: 0;
     }
 }
