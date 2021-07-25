@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-
 }
 
 .marquee_background{
@@ -39,7 +38,7 @@
     width: 100%;
 }
 
-img{
+.carousel_image{
     height: 30rem;
 }
 
@@ -47,7 +46,7 @@ h1{
     text-align: center;
 }
 
-.span{
+.marquee_content .title{
     background-color: #21539a;
     border-right: 5px solid white;
     width: 8rem;
@@ -59,21 +58,27 @@ h1{
     letter-spacing: .05rem;
 }
 
-.marquee ul, .navbar{
+.marquee{
     display: flex;
     justify-content: space-between;
     font-weight: 500;
     letter-spacing: .1rem;
 }
 
-.marquee ul li, .navbar li{
+.marquee a{
     list-style: none;
     margin-right: 4rem;
     cursor: pointer;
     font-weight: bold;
+    color: white;
 }
 
-.icon{
+.marquee a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.carousel_icon{
     border-radius: 50%;
     color: #7aacf1;
     height: 40px;
@@ -89,7 +94,7 @@ h1{
     z-index: 5;
     text-align: center;
 }
-.icon::before{
+.carousel_icon::before{
     content: '';
     height: 20px;
     width: 20px;
@@ -100,14 +105,14 @@ h1{
     text-align: center;
 }
 
-.image{
+.diploma .background .image{
     width: 100%;
     height: 15rem;
     object-fit: cover;
     opacity: .3;
 }
 
-.background{
+.diploma .background{
     background-color: black;
 }
 
@@ -116,7 +121,7 @@ h1{
     margin-top: 5rem;
 }
 
-.diploma>span{
+.diploma>h1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -133,7 +138,7 @@ h1{
 
 .other_courses{
     position: absolute;
-    bottom: -100%;
+    bottom: -110%;
     right: 5%;
     background-color: #F2F5FF;
     display: flex;
@@ -150,18 +155,27 @@ h1{
     padding-bottom: .4rem;
 }
 
-.other_courses ul{
+.other_courses a::before{
+    content: "•";
+    color: #0464A0;
+    margin-right: .5rem;
+}
+
+.other_courses a{
     display: flex;
-    flex-direction: column;
     width: 80%;
     margin-top: .5rem;
-}
-.other_courses ul li{
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 25px;
     color: #0464A0;
+    transition: all .2s ease-in-out;
+}
+
+.other_courses a:hover{
+    text-decoration: none;
+    color: #01314f;
 }
 
 .text{
@@ -239,10 +253,10 @@ h1{
 }
 
 @media screen and (max-width:800px) {
-    .span{
+    .marquee_content .title{
         font-size: .9rem;
     }
-    img{
+    .carousel_image{
         height: 20rem;
     }
     .cards{
@@ -262,7 +276,7 @@ h1{
     .text span:first-child{
         margin: 2rem 0;
     }
-    .diploma span{
+    .diploma h1{
         font-size: 30px;
     }
     .text span:last-child{
@@ -272,7 +286,7 @@ h1{
 
 
 @media screen and (max-width:500px) {
-    img{
+    .carousel_image{
         height: 15rem;
     }
     .marquee_background{
@@ -287,10 +301,10 @@ h1{
         width: 15px;
     }
     .other_courses{
-        margin: 0 3rem;
+        margin:0 2rem;
     }
 
-    .diploma span{
+    .diploma h1{
         font-size: 20px;
     }
 }
@@ -299,7 +313,7 @@ h1{
      ul{
         font-size:.8rem;
     }
-    .diploma span{
+    .diploma h1{
         font-size: 15px;
     }
     .other_courses{
