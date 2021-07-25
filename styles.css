@@ -12,7 +12,7 @@
     font-family: 'Mukta', sans-serif;
 }
 
-.marquee_content{
+.marquee_background .marquee_content{
     width: 80%;
     margin: 0 auto;
     height: 100%;
@@ -46,7 +46,7 @@ h1{
     text-align: center;
 }
 
-.marquee_content .title{
+.marquee_background .marquee_content .title{
     background-color: #21539a;
     border-right: 5px solid white;
     width: 8rem;
@@ -94,6 +94,7 @@ h1{
     z-index: 5;
     text-align: center;
 }
+
 .carousel_icon::before{
     content: '';
     height: 20px;
@@ -121,7 +122,7 @@ h1{
     margin-top: 5rem;
 }
 
-.diploma>h1{
+.diploma h1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -184,7 +185,7 @@ h1{
     flex-direction: column;
 }
 
-.text span:first-child{
+.text .about{
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -193,7 +194,7 @@ h1{
     margin: 2rem 0;
 }
 
-.text span:last-child{
+.text .description{
     width: 80%;
     font-family: Roboto;
     font-style: normal;
@@ -204,7 +205,7 @@ h1{
     color: rgba(0, 0, 0, 0.8);
 }
 
-.cards{
+/* .cards{
     width: 90%;
     margin: 5rem auto;
     display: flex;
@@ -223,7 +224,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 @media screen and (min-width: 1400px) {
     .text{
@@ -231,23 +232,21 @@ h1{
     }
 }
 @media screen and (max-width:1000px) {
-    .main_container, .marquee_content{
+    .main_container,.marquee_background .marquee_content{
         width: 100%;
     }
-
     .diploma{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
     .text{
         padding-left: 2rem;
     }
-    .text span:first-child{
+    .text .about{
         margin: 1rem 0;
     }
-    .text span:last-child{
+    .text .description{
         width: 70%;
     }
 }
@@ -273,13 +272,13 @@ h1{
         width: 100%;
         padding-inline: 1rem;
     }
-    .text span:first-child{
+    .text .about{
         margin: 2rem 0;
     }
     .diploma h1{
         font-size: 30px;
     }
-    .text span:last-child{
+    .text .description{
         width: 100%;
     }
 }
@@ -292,11 +291,11 @@ h1{
     .marquee_background{
         padding-inline: 0;
     }
-    .icon{
+    .carousel_icon{
         height: 30px;
         width: 30px;
     }
-    .icon::before{
+    .carousel_icon::before{
         height: 15px;
         width: 15px;
     }
@@ -310,9 +309,6 @@ h1{
 }
 
 @media screen and (max-width:400px) {
-     ul{
-        font-size:.8rem;
-    }
     .diploma h1{
         font-size: 15px;
     }
